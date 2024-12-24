@@ -23,7 +23,7 @@
 		{#each a as content,i}
 		<a href="/stori/{content.slug}">
 			<img
-				loading="lazy"
+				loading={i == 0 ? "eager" : "lazy"}
 				src="https://files.jurno.id/uploads/images/article/{content.thumbnail_social}?original=0"
 				alt={content.title}/>
 			<h3>{content.title}</h3>

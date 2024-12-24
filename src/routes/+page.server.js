@@ -2,7 +2,7 @@ export const prerender = true;
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ fetch, setHeaders }) {
-	setHeaders({'cache-control':'max-age=600'})
+	setHeaders({'Cache-Control':'public, max-age=600'})
 	const tokenurl = "https://api-dev.jurno.id/api/newsmap/v1/token";
 	const urlStori = "https://api.jurno.id/api/newsmap/v1/article/list?size=10"
 	const urlJurnopedia = "https://api.jurno.id/api/newsmap/v1/thread/list?size=10"
