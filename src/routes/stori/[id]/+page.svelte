@@ -1,7 +1,6 @@
 <script>
 	import { invalidate } from '$app/navigation';
 	import { onDestroy, onMount } from 'svelte';
-    import { decode } from 'html-entities'
 
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -49,7 +48,7 @@
     <h1>{a.title}</h1>
     <p>{a.description}</p>
     <p>{a.keywords}</p>
-    {@html decode(a.article)}
+    {@html a.article}
 </article>
 
 <style>
