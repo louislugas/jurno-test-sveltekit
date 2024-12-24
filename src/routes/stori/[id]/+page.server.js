@@ -22,12 +22,8 @@ export async function load({ fetch, params, setHeaders}) {
 		return response
 	}
 
-	setHeaders({'cache-control':'max-age=600'})
-
 	let res = await getData(url)
 	let a = await res.json()
-
-	// console.log(a)
 	
 	return {
 		a:a
