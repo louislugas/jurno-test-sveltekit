@@ -22,7 +22,8 @@
 		<h2>STORI</h2>
 		{#each a as content,i}
 		<a href="/stori/{content.slug}">
-			<img src="https://files.jurno.id/uploads/images/article/{content.thumbnail_social}?original=0"
+			<img
+				src="https://files.jurno.id/uploads/images/article/{content.thumbnail_social}?original=0"
 				alt={content.title}/>
 			<h3>{content.title}</h3>
 			<p>{content.description}</p>
@@ -60,5 +61,9 @@
 	}
 	img {
 		width:100%;
+		height:100%;
+		max-width:660px;
+		max-height:371px;
+		aspect-ratio: 1.78;
 	}
 </style>
