@@ -1,7 +1,7 @@
 export const prerender = true;
 
 /** @type {import('./$types').PageServerLoad} */
-export async function load({ fetch, params}) {
+export async function load({ fetch, params, setHeaders}) {
 	const tokenurl = "https://api-dev.jurno.id/api/newsmap/v1/token";
 	const url = `https://api.jurno.id/api/newsmap/v1/article/detail/${params.id}`
 	
@@ -21,6 +21,8 @@ export async function load({ fetch, params}) {
 		})
 		return response
 	}
+
+	setHeaders({'cache-control':'max-age=600'})
 
 	let res = await getData(url)
 	let a = await res.json()
