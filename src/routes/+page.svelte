@@ -22,8 +22,8 @@
 		<h2>STORI</h2>
 		{#each a as content,i}
 		<a href="/stori/{content.slug}">
-			<!-- <img src="https://files.jurno.id/uploads/images/article/{content.thumbnail_social}?original=1"
-				alt={content.title}/> -->
+			<enhanced:img src="https://files.jurno.id/uploads/images/article/{content.thumbnail_social}?original=1"
+				alt={content.title}/>
 			<h3>{content.title}</h3>
 			<p>{content.description}</p>
 		</a>
