@@ -22,7 +22,7 @@
 		<h2>STORI</h2>
 		{#each a as content,i}
 		<a href="/stori/{content.slug}">
-			<enhanced:img src="https://files.jurno.id/uploads/images/article/{content.thumbnail_social}?original=1"
+			<img src="https://files.jurno.id/uploads/images/article/{content.thumbnail_social}"
 				alt={content.title}/>
 			<h3>{content.title}</h3>
 			<p>{content.description}</p>
